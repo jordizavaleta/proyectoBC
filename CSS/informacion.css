@@ -1,0 +1,102 @@
+:root {
+  --color1: orange;
+  --color2: Beige;
+  --color3: #BCBCBC;
+  --color4: #00010D;
+  --color5: white;
+}
+
+.info-bullying-fullwidth {
+  width: 100%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  color: var(--color4); /* texto principal oscuro */
+  font-family: Arial, sans-serif;
+  background-color: var(--color5); /* fondo blanco */
+}
+
+.bloque {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 40px;
+  align-items: center;
+}
+
+.bloque.imagen-izquierda {
+  flex-direction: row;
+}
+
+.bloque.imagen-derecha {
+  flex-direction: row-reverse;
+}
+
+.bloque .imagen {
+  flex: 1 1 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bloque .imagen img {
+  width: 100%;
+  max-width: 300px; /* imágenes no muy grandes */
+  height: auto;
+  border-radius: 0; /* sin bordes */
+  display: block;
+  object-fit: contain;
+}
+
+.bloque .contenido {
+  flex: 1 1 60%;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color4); /* texto oscuro */
+}
+
+.bloque .contenido h2,
+.bloque .contenido h3,
+.bloque .contenido h4 {
+  margin-bottom: 10px;
+  color: var(--color1); /* títulos en naranja */
+  font-weight: 600;
+}
+
+.bloque .contenido ul {
+  margin-left: 20px;
+  margin-bottom: 15px;
+  color: var(--color4); /* listas en texto oscuro */
+}
+
+
+/* Animacion*/
+/* Animación slide-in */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.bloque .imagen.animate-left {
+  animation: slideInLeft 0.8s ease forwards;
+}
+
+.bloque .imagen.animate-right {
+  animation: slideInRight 0.8s ease forwards;
+}
+

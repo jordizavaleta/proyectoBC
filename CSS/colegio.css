@@ -1,0 +1,158 @@
+:root {
+  --color1: orange;
+  --color2: beige;
+  --color3: #bcbcbc;
+  --color4: #00010d;
+  --color5: white;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  --radius: 12px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--color2);
+  color: var(--color4);
+}
+
+.colegio {
+  max-width: 1200px;
+  margin: 2rem auto;
+  background: var(--color5);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.titulo-imagen {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.titulo-imagen img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+.descripcion {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.alianza {
+  background: var(--color2);
+  border-left: 5px solid var(--color1);
+  padding: 1rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.mision-vision {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.mision,
+.vision {
+  flex: 1;
+  background: var(--color2);
+  padding: 1rem;
+  border-left: 5px solid var(--color1); /* Línea naranja */
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.grafico {
+  text-align: center;
+}
+
+.grafico img {
+  max-width: 50%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.leyenda {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centrado horizontal */
+  gap: 1rem;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.leyenda li {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  background: var(--color2);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.color {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  border: 2px solid var(--color4);
+}
+
+/* Colores de leyenda que coinciden con la imagen */
+.color-verbal    { background: #F87526; } /* Naranja fuerte */
+.color-ciber     { background: #45B3B8; } /* Púrpura */
+.color-psico     { background: #1D7DBC; } /* Azul */
+.color-fisico    { background: #45B3B8; } /* Rojo */
+.color-social    { background: #FFC03F; } /* Verde */
+
+#toggle-porcentajes {
+  background-color: var(--color1); /* naranja */
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: var(--shadow);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#toggle-porcentajes:hover {
+  background-color: darkorange;
+  transform: scale(1.05);
+}
+
+
+.ubicacion iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: var(--radius);
+  border: none;
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 768px) {
+  .titulo-imagen {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mision-vision {
+    flex-direction: column;
+  }
+
+  .leyenda {
+    flex-direction: column;
+    align-items: center;
+  }
+}
