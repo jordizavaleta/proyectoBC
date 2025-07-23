@@ -1,98 +1,103 @@
-/* Variables de color */
-:root {
-  --color1: orange;
-  --color2: beige;
-  --color3: #bcbcbc;
-  --color4: #00010d;
-  --color5: white;
-}
-
+/* Aplica box-sizing: border-box a todos los elementos,
+   lo cual incluye el padding y border dentro del ancho/alto total */
 * {
   box-sizing: border-box;
 }
 
+/* Estilo base para body y html */
 body, html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--color2);
-  color: var(--color4);
-  height: 100vh;
+  margin: 0; /* Elimina márgenes por defecto */
+  padding: 0; /* Elimina relleno por defecto */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente principal */
+  background-color: var(--color2); /* Fondo claro (definido por variable CSS) */
+  color: var(--color4); /* Color de texto principal */
+  height: 100vh; /* Altura completa del viewport */
 }
 
+/* Contenedor principal de la página, usa flexbox para dividir la pantalla */
 .container {
-  display: flex;
-  min-height: 100vh;
+  display: flex; /* Diseño en columnas (formulario + imagen) */
+  min-height: 100vh; /* Asegura altura completa del viewport */
 }
 
-/* Sección formulario */
+/* ──────────────────────── */
+/* SECCIÓN DEL FORMULARIO */
+/* ──────────────────────── */
 .form-section {
-  flex: 1;
+  flex: 1; /* Ocupa mitad del ancho */
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 3rem 4rem;
-  background-color: var(--color5);
-  box-shadow: 3px 0 15px rgba(0,0,0,0.1);
+  flex-direction: column; /* Distribuye elementos de arriba hacia abajo */
+  justify-content: center; /* Centra verticalmente el contenido */
+  padding: 3rem 4rem; /* Espaciado interno */
+  background-color: var(--color5); /* Fondo blanco */
+  box-shadow: 3px 0 15px rgba(0,0,0,0.1); /* Sombra lateral suave */
 }
 
+/* Contenedor del logo */
 .logo {
   width: 120px;
-  margin: 0 auto 1.5rem auto; /* centrado horizontal y margen abajo */
+  margin: 0 auto 1.5rem auto; /* Centrado horizontal + margen inferior */
 }
 
 .logo img {
   width: 100%;
   height: auto;
-  display: block;
+  display: block; /* Elimina espacio extra debajo de imagen */
 }
 
-
+/* Título principal del formulario */
 .title {
-  font-weight: 700;
+  font-weight: 700; /* Negrita */
   font-size: 2rem;
   margin-bottom: 0.5rem;
-  color: var(--color4);
+  color: var(--color4); /* Texto oscuro */
 }
 
+/* Parte del título en color destacado */
 .title span {
-  color: var(--color1);
+  color: var(--color1); /* Naranja u otro color primario */
 }
 
+/* Párrafo introductorio */
 .intro {
   font-size: 1.1rem;
   margin-bottom: 2rem;
-  color: var(--color3);
+  color: var(--color3); /* Gris medio */
 }
 
+/* Contenedor del formulario */
 .login-form {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Elementos en columna */
 }
 
+/* Etiquetas de los campos */
 .form-label {
   font-weight: 600;
   margin-bottom: 0.4rem;
   color: var(--color4);
 }
 
+/* Campos de entrada (input) */
 .form-input {
-  padding: 12px 15px;
-  margin-bottom: 1.5rem;
-  border: 2px solid var(--color3);
-  border-radius: 6px;
+  padding: 12px 15px; /* Espaciado interno */
+  margin-bottom: 1.5rem; /* Espaciado inferior entre campos */
+  border: 2px solid var(--color3); /* Borde gris */
+  border-radius: 6px; /* Bordes redondeados */
   font-size: 1rem;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease; /* Transición al enfocar */
 }
 
+/* Estilo al enfocar el input */
 .form-input:focus {
-  border-color: var(--color1);
-  outline: none;
+  border-color: var(--color1); /* Se vuelve naranja */
+  outline: none; /* Quita el borde azul por defecto */
 }
 
+/* Botón de envío */
 .btn {
-  background-color: var(--color1);
-  color: var(--color5);
+  background-color: var(--color1); /* Naranja o primario */
+  color: var(--color5); /* Texto claro/blanco */
   padding: 14px 0;
   border: none;
   border-radius: 6px;
@@ -102,25 +107,29 @@ body, html {
   transition: background-color 0.3s ease;
 }
 
+/* Efecto hover en el botón */
 .btn:hover {
   background-color: darkorange;
 }
 
-/* Sección imagen */
+/* ──────────────────────── */
+/* SECCIÓN DE IMAGEN */
+/* ──────────────────────── */
 .image-section {
-  flex: 1;
+  flex: 1; /* Ocupa mitad del ancho */
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* Evita que desborde contenido */
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--color3);
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  background: var(--color3); /* Fondo gris */
 }
 
+/* Imagen de fondo */
 .image-section img {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  object-position: center;
-  user-select: none;
+  width: 100%; /* Ocupa todo el ancho */
+  height: 100vh; /* Ocupa toda la altura del viewport */
+  object-fit: cover; /* Cubre sin deformar */
+  object-position: center; /* Centrada */
+  user-select: none; /* No se puede seleccionar la imagen */
 }

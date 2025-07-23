@@ -1,89 +1,90 @@
-:root {
-  --color1: orange;
-  --color2: Beige;
-  --color3: #BCBCBC;
-  --color4: #00010D;
-  --color5: white;
-}
-
+/* === CONTENEDOR PRINCIPAL DE INFORMACIÓN === */
 .info-bullying-fullwidth {
-  width: 100%;
-  padding: 20px 40px;
-  box-sizing: border-box;
-  color: var(--color4); /* texto principal oscuro */
-  font-family: Arial, sans-serif;
-  background-color: var(--color5); /* fondo blanco */
+  width: 100%;                        /* Ocupa todo el ancho disponible */
+  padding: 20px 40px;                /* Espaciado interno (vertical y horizontal) */
+  box-sizing: border-box;            /* Incluye el padding dentro del ancho total */
+  color: var(--color4);              /* Texto oscuro */
+  font-family: Arial, sans-serif;    /* Fuente secundaria */
+  background-color: var(--color5);   /* Fondo blanco */
 }
 
+/* === BLOQUE INDIVIDUAL (TEXTO + IMAGEN) === */
 .bloque {
-  display: flex;
-  gap: 25px;
-  margin-bottom: 40px;
-  align-items: center;
+  display: flex;         /* Usa flexbox para alinear imagen y contenido en fila */
+  gap: 25px;             /* Espacio entre imagen y contenido */
+  margin-bottom: 40px;   /* Separación entre bloques */
+  align-items: center;   /* Centra verticalmente los elementos */
 }
 
+/* Imagen a la izquierda del texto */
 .bloque.imagen-izquierda {
-  flex-direction: row;
+  flex-direction: row; /* Imagen - Texto */
 }
 
+/* Imagen a la derecha del texto */
 .bloque.imagen-derecha {
-  flex-direction: row-reverse;
+  flex-direction: row-reverse; /* Texto - Imagen */
 }
 
+/* === CONTENEDOR DE IMAGEN === */
 .bloque .imagen {
-  flex: 1 1 35%;
+  flex: 1 1 35%;         /* Ocupa 35% del ancho, crece y encoge si es necesario */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Imagen dentro del bloque */
 .bloque .imagen img {
-  width: 100%;
-  max-width: 300px; /* imágenes no muy grandes */
-  height: auto;
-  border-radius: 0; /* sin bordes */
+  width: 100%;               /* Imagen ocupa el 100% del contenedor */
+  max-width: 300px;          /* Pero no más de 300px */
+  height: auto;              /* Mantiene proporciones */
+  border-radius: 0;          /* Sin bordes redondeados */
   display: block;
-  object-fit: contain;
+  object-fit: contain;       /* Escala la imagen sin recortar */
 }
 
+/* === CONTENIDO DE TEXTO === */
 .bloque .contenido {
-  flex: 1 1 60%;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: var(--color4); /* texto oscuro */
+  flex: 1 1 60%;             /* Ocupa 60% del ancho, crece/encoge */
+  font-size: 1rem;           /* Tamaño estándar de texto */
+  line-height: 1.5;          /* Interlineado para legibilidad */
+  color: var(--color4);      /* Texto oscuro */
 }
 
+/* Títulos dentro del contenido */
 .bloque .contenido h2,
 .bloque .contenido h3,
 .bloque .contenido h4 {
   margin-bottom: 10px;
-  color: var(--color1); /* títulos en naranja */
-  font-weight: 600;
+  color: var(--color1);      /* Naranja */
+  font-weight: 600;          /* Negrita */
 }
 
+/* Listas dentro del contenido */
 .bloque .contenido ul {
   margin-left: 20px;
   margin-bottom: 15px;
-  color: var(--color4); /* listas en texto oscuro */
+  color: var(--color4);      /* Texto oscuro */
 }
 
-
-/* Animacion*/
-/* Animación slide-in */
+/* === ANIMACIONES DE ENTRADA === */
+/* Slide-in desde la izquierda */
 @keyframes slideInLeft {
   from {
-    transform: translateX(-50px);
-    opacity: 0;
+    transform: translateX(-50px); /* Empieza desplazado a la izquierda */
+    opacity: 0;                   /* Invisible al inicio */
   }
   to {
-    transform: translateX(0);
-    opacity: 1;
+    transform: translateX(0);     /* Posición final */
+    opacity: 1;                   /* Completamente visible */
   }
 }
 
+/* Slide-in desde la derecha */
 @keyframes slideInRight {
   from {
-    transform: translateX(50px);
+    transform: translateX(50px);  /* Empieza desplazado a la derecha */
     opacity: 0;
   }
   to {
@@ -92,11 +93,61 @@
   }
 }
 
+/* Aplicar animación izquierda */
 .bloque .imagen.animate-left {
   animation: slideInLeft 0.8s ease forwards;
 }
 
+/* Aplicar animación derecha */
 .bloque .imagen.animate-right {
   animation: slideInRight 0.8s ease forwards;
 }
 
+
+
+/*****LOGO DE WHATSAPP ********/
+    .whatsapp-fixed {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .whatsapp-fixed a {
+      position: relative;
+      display: inline-block;
+    }
+
+    .whatsapp-fixed img {
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-fixed img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Estilo del mensaje emergente */
+    .tooltip {
+      visibility: hidden;
+      width: 160px;
+      background-color: #25D366;
+      color: white;
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px;
+      position: absolute;
+      bottom: 70px;
+      right: 0;
+      opacity: 0;
+      transition: opacity 0.3s;
+      font-size: 14px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    }
+
+    .whatsapp-fixed a:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }

@@ -1,52 +1,62 @@
+/* === SECCIÓN QUIÉNES SOMOS === */
 #quien-som {
-  background-color: var(--color2);
-  padding: 40px 30px;
-  border-radius: 12px;
-  max-width: 1100px;
-  margin: 40px auto;
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+  background-color: var(--color2); /* Fondo beige claro */
+  padding: 40px 30px;              /* Espaciado interior */
+  border-radius: 12px;             /* Bordes redondeados */
+  max-width: 1100px;               /* Ancho máximo para no ocupar toda la pantalla */
+  margin: 40px auto;               /* Centrado horizontal y margen vertical */
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12); /* Sombra suave */
   font-family: sans-serif;
-  color: var(--color4);
+  color: var(--color4);            /* Texto oscuro */
+  
 }
 
+/* === TÍTULOS DENTRO DE QUIÉNES SOMOS === */
 #quien-som h2,
 #quien-som h3 {
-  color: var(--color1);
+  color: var(--color1);            /* Color principal (naranja) */
   text-align: center;
   font-weight: 700;
   margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1.1px;
+  text-transform: uppercase;       /* Todo en mayúsculas */
+  letter-spacing: 1.1px;           /* Espaciado entre letras */
+  
 }
 
+/* === PÁRRAFOS === */
 #quien-som p {
   font-size: 1.1rem;
-  line-height: 1.7;
+  line-height: 1.7;                /* Espaciado entre líneas */
   margin-bottom: 22px;
-  text-align: justify;
+  text-align: justify;             /* Justifica los textos */
   color: var(--color4);
+  
 }
 
+/* === LISTAS DENTRO DE LA SECCIÓN === */
 #quien-som ul,
 #quien-som ol {
   max-width: 720px;
-  margin: 0 auto 30px auto;
+  margin: 0 auto 30px auto;        /* Centrado con margen inferior */
   padding-left: 20px;
   color: var(--color4);
   font-size: 1.05rem;
   line-height: 1.6;
 }
 
+/* === ÍTEMS DE LISTA === */
 #quien-som ul li,
 #quien-som ol li {
   margin-bottom: 12px;
 }
 
+/* === CONTENEDOR DE IMAGEN Y LISTA DE EQUIPO === */
 .equipo-contenido {
   text-align: center;
   margin-top: 30px;
 }
 
+/* === IMAGEN DE LA SECCIÓN (ej. foto grupal) === */
 .equipo-contenido img.section-img {
   width: 320px;
   max-width: 90%;
@@ -56,8 +66,9 @@
   margin-bottom: 20px;
 }
 
+/* === LISTA DE INTEGRANTES DEL EQUIPO === */
 .integrantes {
-  list-style: none;
+  list-style: none;         /* Quitar los puntos por defecto */
   padding: 0;
   max-width: 500px;
   margin: 0 auto;
@@ -67,26 +78,27 @@
   font-size: 1.1rem;
 }
 
+/* === ESTILO INDIVIDUAL DE CADA INTEGRANTE === */
 .integrantes li {
   margin: 8px 0;
   padding-left: 12px;
   position: relative;
 }
 
+/* === VIÑETA PERSONALIZADA PARA CADA INTEGRANTE === */
 .integrantes li::before {
-  content: "•";
-  color: var(--color1);
+  content: "•";                  /* Punto como viñeta */
+  color: var(--color1);          /* Naranja */
   font-weight: bold;
   position: absolute;
   left: 0;
   top: 0;
 }
 
-
-
+/* === BOTÓN PARA MOSTRAR/OCULTAR INTEGRANTES === */
 #toggle-integrantes {
-  background-color: var(--color1); /* color principal */
-  color: var(--color2); /* color secundario o claro para texto */
+  background-color: var(--color1); /* Fondo naranja */
+  color: var(--color2);            /* Texto claro (beige) */
   border: 2px solid var(--color1);
   padding: 12px 24px;
   font-size: 1.1rem;
@@ -99,15 +111,64 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* === HOVER DEL BOTÓN === */
 #toggle-integrantes:hover {
-  background-color: var(--color2);
+  background-color: var(--color2); /* Se invierte */
   color: var(--color1);
   border-color: var(--color1);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* === ENFOQUE DEL BOTÓN (ACCESIBILIDAD) === */
 #toggle-integrantes:focus {
   outline: none;
-  box-shadow: 0 0 6px 3px rgba(100, 150, 250, 0.6);
+  box-shadow: 0 0 6px 3px rgba(100, 150, 250, 0.6); /* Resalte azul accesible */
 }
 
+
+/*****LOGO DE WHATSAPP ********/
+    .whatsapp-fixed {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .whatsapp-fixed a {
+      position: relative;
+      display: inline-block;
+    }
+
+    .whatsapp-fixed img {
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-fixed img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Estilo del mensaje emergente */
+    .tooltip {
+      visibility: hidden;
+      width: 160px;
+      background-color: #25D366;
+      color: white;
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px;
+      position: absolute;
+      bottom: 70px;
+      right: 0;
+      opacity: 0;
+      transition: opacity 0.3s;
+      font-size: 14px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    }
+
+    .whatsapp-fixed a:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }

@@ -1,23 +1,27 @@
-//JQUERY
 $(document).ready(function () {
-  //Animación para mostrar pie de página lentamente
+  // Mostrar pie de página con animación
   $(".footer").hide().fadeIn(1500);
-});
 
-$(document).ready(function() {
-  // Al hacer click en los títulos .toggle-section, plegar o desplegar su contenido
-  $('.toggle-section').click(function() {
-    $(this).next('.section-content').slideToggle(400);
-    $(this).toggleClass('active');
+  // Mostrar secciones al pasar el mouse una sola vez y mantener visibles
+  $('.toggle-section').each(function () {
+    const $title = $(this);
+    const $content = $title.next('.section-content');
+
+    $title.on('mouseenter', function () {
+      if (!$content.is(':visible')) {
+        $content.stop(true, true).slideDown(300);
+        $title.addClass('active');
+      }
+    });
   });
 
-  // Botón para mostrar/ocultar integrantes
-  $('#toggle-integrantes').click(function() {
+  // Botón para mostrar/ocultar integrantes (función manual)
+  $('#toggle-integrantes').click(function () {
     $('.integrantes').slideToggle(400);
     const texto = $(this).text() === "Mostrar integrantes" ? "Ocultar integrantes" : "Mostrar integrantes";
     $(this).text(texto);
   });
 
-  // Ocultamos todas las secciones plegables
-  $('.section-content').hide();
+  // Ocultar inicialmente
+  $('.section-content, .integrantes').hide();
 });

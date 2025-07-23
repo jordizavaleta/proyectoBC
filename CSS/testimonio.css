@@ -1,94 +1,92 @@
-:root {
-  --color1: orange;
-  --color2: Beige;
-  --color3: #BCBCBC;
-  --color4: #00010D;
-  --color5: white;
-}
-
+/* Estilo base para <article> */
 article {
-  width: 100%;
+  width: 100%;  /* Ocupa todo el ancho del contenedor */
   padding: 0;
   margin: 0;
 }
 
+/* Contenedor principal que agrupa testimonios y formulario */
 .testimonios-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 40px;
-  padding: 40px;
-  background: var(--color2);
-  box-sizing: border-box;
+  display: flex;            /* Diseño en fila */
+  flex-wrap: wrap;          /* Permite que los elementos se acomoden en más de una línea si es necesario */
+  justify-content: space-between;  /* Espacio entre columnas */
+  gap: 40px;                /* Espacio entre columnas y filas */
+  padding: 40px;            /* Espaciado interno general */
+  background: var(--color2);/* Fondo claro */
+  box-sizing: border-box;  /* Incluye padding en el ancho total */
 }
 
-/* Caja testimonios y formulario */
+/* Cajas de testimonios y formulario */
 .testimonios, .formulario {
-  flex: 1 1 45%;
-  background: var(--color5);
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  flex: 1 1 45%;            /* Ocupan hasta el 45% del ancho, pero se adaptan */
+  background: var(--color5);/* Fondo blanco o claro */
+  padding: 25px;            /* Relleno interno */
+  border-radius: 12px;      /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Sombra suave */
 }
 
-/* Títulos */
+/* Títulos de ambas secciones */
 .testimonios h2,
 .formulario h2 {
   margin-bottom: 15px;
-  font-size: 1.8rem;
-  color: var(--color4);
+  font-size: 1.8rem;        /* Tamaño grande */
+  color: var(--color4);     /* Texto oscuro */
 }
 
 /* Lista de testimonios */
 .testimonios ul {
-  list-style: none;
+  list-style: none;         /* Elimina viñetas */
   padding: 0;
   margin: 0;
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  flex-direction: column;   /* Elementos en columna */
+  gap: 15px;                /* Separación entre testimonios */
 }
 
+/* Cada testimonio */
 .testimonios li {
-  background-color: var(--color3);
-  border-left: 6px solid var(--color1);
-  padding: 15px 20px;
-  border-radius: 10px;
-  color: var(--color4);
+  background-color: var(--color3);   /* Fondo gris claro */
+  border-left: 6px solid var(--color1); /* Borde lateral naranja */
+  padding: 15px 20px;                /* Relleno interno */
+  border-radius: 10px;               /* Bordes redondeados */
+  color: var(--color4);              /* Texto oscuro */
   font-size: 1rem;
 }
 
-/* Formulario */
+/* Etiquetas del formulario */
 .formulario label {
   display: block;
   margin-top: 15px;
   margin-bottom: 5px;
   font-weight: bold;
-  color: var(--color4);
+  color: var(--color4);              /* Texto oscuro */
 }
 
+/* Campos del formulario (select y textarea) */
 select, textarea {
-  width: 100%;
+  width: 100%;                       /* Ocupan todo el ancho */
   padding: 12px;
   border-radius: 8px;
-  border: 1px solid var(--color3);
+  border: 1px solid var(--color3);   /* Borde gris */
   font-size: 1rem;
   margin-bottom: 10px;
   box-sizing: border-box;
-  background-color: var(--color5);
-  color: var(--color4);
+  background-color: var(--color5);   /* Fondo blanco */
+  color: var(--color4);              /* Texto oscuro */
 }
 
+/* El textarea puede cambiar su altura */
 textarea {
   resize: vertical;
 }
 
+/* Botón de enviar */
 button#btn-enviar {
-  width: 100%;
+  width: 100%;                       /* Ocupa todo el ancho del formulario */
   padding: 12px;
-  background-color: var(--color1);
+  background-color: var(--color1);   /* Naranja (principal) */
   border: none;
-  color: var(--color4);
+  color: var(--color4);              /* Texto oscuro */
   font-size: 1rem;
   font-weight: bold;
   border-radius: 8px;
@@ -96,10 +94,12 @@ button#btn-enviar {
   transition: background-color 0.3s ease;
 }
 
+/* Efecto hover para el botón */
 button#btn-enviar:hover {
   background-color: darkorange;
 }
 
+/* Mensaje de confirmación o error */
 #mensaje-testimonio {
   margin-top: 10px;
   font-weight: bold;
@@ -107,13 +107,60 @@ button#btn-enviar:hover {
   color: var(--color4);
 }
 
-/* Responsive */
+/* Responsive: ajusta diseño para pantallas pequeñas */
 @media (max-width: 768px) {
   .testimonios, .formulario {
-    flex: 1 1 100%;
+    flex: 1 1 100%;         /* Ocupan el 100% del ancho (una debajo de otra) */
   }
 
   .testimonios-container {
-    padding: 20px;
+    padding: 20px;          /* Menor relleno en móvil */
   }
 }
+
+/****Logo de whatsapp **/
+ .whatsapp-fixed {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .whatsapp-fixed a {
+      position: relative;
+      display: inline-block;
+    }
+
+    .whatsapp-fixed img {
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-fixed img:hover {
+      transform: scale(1.5);
+    }
+
+    /* Estilo del mensaje emergente */
+    .tooltip {
+      visibility: hidden;
+      width: 160px;
+      background-color: #25D366;
+      color: white;
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px;
+      position: absolute;
+      bottom: 70px;
+      right: 0;
+      opacity: 0;
+      transition: opacity 0.3s;
+      font-size: 14px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    }
+
+    .whatsapp-fixed a:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }

@@ -1,91 +1,138 @@
-:root {
-  --color1: orange;       /* Naranja vivo */
-  --color2: beige;        /* Fondo general */
-  --color3: #bcbcbc;      /* Gris claro */
-  --color4: #00010d;      /* Texto o fondo oscuro */
-  --color5: white;        /* Blanco puro */
-  --sombra: 0 4px 12px rgba(0, 0, 0, 0.1);
-  --radio: 12px;
-}
-
+/* === ESTILO GENERAL DEL BODY === */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: "Segoe UI", sans-serif;
-  background-color: var(--color2);
-  color: var(--color4);
+  margin: 0; /* Elimina márgenes por defecto */
+  padding: 0; /* Elimina el relleno por defecto */
+  font-family: "Segoe UI", sans-serif; /* Fuente principal */
+  background-color: var(--color2);     /* Fondo beige (definido en variables globales) */
+  color: var(--color4);                /* Texto en color oscuro */
 }
 
-/* VIDEO */
+/* === SECCIÓN DE VIDEO === */
 .video-section {
-  display: flex;
-  justify-content: center;
-  padding: 2rem;
+  display: flex;               /* Alinea el contenido en fila */
+  justify-content: center;     /* Centra horizontalmente el video */
+  padding: 2rem;               /* Espaciado interno */
 }
 
 .video-section iframe {
-  width: 100%;
-  max-width: 720px;
-  height: 405px;
-  border-radius: var(--radio);
-  box-shadow: var(--sombra);
+  width: 100%;                 /* Ocupa todo el ancho disponible */
+  max-width: 720px;            /* Ancho máximo del video */
+  height: 405px;               /* Altura fija del video */
+  border-radius: var(--radio);/* Bordes redondeados (variable) */
+  box-shadow: var(--sombra);  /* Sombra alrededor del video */
 }
 
-/* CONTENIDO PRINCIPAL */
+/* === CONTENEDOR GENERAL DEL CONTENIDO === */
 .contenido-victima {
-  display: grid;
-  gap: 2rem;
-  padding: 2rem;
+  display: grid; /* Diseño en rejilla */
+  gap: 2rem;     /* Espacio entre los elementos hijos */
+  padding: 2rem; /* Espaciado interno */
 }
 
+/* === DISEÑO DE LA SECCIÓN DE INFORMACIÓN === */
 .grid-victima {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr; /* Una sola columna (puede adaptarse con media queries) */
   gap: 2rem;
 }
 
+/* === CONTENEDOR DE LA IMAGEN === */
 .grid-victima .imagen {
-  text-align: center;
+  text-align: center; /* Centra la imagen horizontalmente */
 }
 
+/* Imagen dentro de la sección .imagen */
 .grid-victima .imagen img {
-  max-width: 100%;
-  height: auto;
-  border-radius: var(--radio);
-  box-shadow: var(--sombra);
+  max-width: 100%;               /* Que no sobrepase su contenedor */
+  height: auto;                  /* Mantiene la proporción original */
+  border-radius: var(--radio);   /* Bordes redondeados */
+  box-shadow: var(--sombra);     /* Sombra sutil */
 }
 
+/* === BLOQUE DE INFORMACIÓN PRINCIPAL === */
 .info {
-  background-color: var(--color5);
-  padding: 2rem;
-  border-radius: var(--radio);
-  box-shadow: var(--sombra);
+  background-color: var(--color5);  /* Fondo blanco */
+  padding: 2rem;                    /* Espaciado interno */
+  border-radius: var(--radio);      /* Bordes redondeados */
+  box-shadow: var(--sombra);        /* Sombra suave */
 }
 
+/* Títulos dentro de .info */
 .info h2,
 .info h3 {
-  color: var(--color1);
-  margin-top: 0;
+  color: var(--color1);  /* Color naranja para títulos */
+  margin-top: 0;         /* Elimina margen superior para alinear mejor */
 }
 
+/* Lista dentro del bloque info */
 .info ul {
-  list-style: disc;
-  padding-left: 1.5rem;
+  list-style: disc;         /* Viñetas con puntos */
+  padding-left: 1.5rem;     /* Espaciado desde el margen izquierdo */
 }
 
+/* === CITA DESTACADA === */
 blockquote {
-  font-style: italic;
-  background-color: #fff8ec;
-  padding: 1rem;
-  border-left: 4px solid var(--color1);
-  margin: 1.5rem 0;
+  font-style: italic;           /* Texto en cursiva */
+  background-color: #fff8ec;    /* Fondo claro tipo papel */
+  padding: 1rem;                /* Espaciado interno */
+  border-left: 4px solid var(--color1); /* Barra izquierda naranja */
+  margin: 1.5rem 0;             /* Margen vertical */
 }
 
+/* === SECCIÓN DE CONTACTO === */
 .contacto h4 {
-  margin-top: 1.5rem;
-  font-weight: bold;
+  margin-top: 1.5rem;  /* Espacio antes del encabezado */
+  font-weight: bold;   /* Texto en negrita */
 }
 
 .contacto p {
-  margin: 0.5rem 0 0;
+  margin: 0.5rem 0 0;  /* Margen superior para separación del párrafo */
+}
+
+
+/****Logo de whatsapp **/
+.whatsapp-fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1500;
+}
+
+.whatsapp-fixed a {
+  position: relative;
+  display: inline-block;
+}
+
+.whatsapp-fixed img {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-fixed img:hover {
+  transform: scale(1.5);
+  }
+
+/* Estilo del mensaje emergente */
+.tooltip {
+  visibility: hidden;
+  width: 160px;
+  background-color: #25D366;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 14px;
+  box-shadow: 0 0 100px rgba(0,0,0,0.2);
+}
+
+.whatsapp-fixed a:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
 }

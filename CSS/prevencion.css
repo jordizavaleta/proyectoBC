@@ -1,97 +1,142 @@
+/* === FUENTE EXTERNA DE GOOGLE FONTS === */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-:root {
-  --color1: orange;
-  --color2: beige;
-  --color3: #BCBCBC;
-  --color4: #00010D;
-  --color5: white;
-}
-
+/* === ESTILOS GENERALES DEL BODY === */
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--color2);
-  color: var(--color4);
+  font-family: 'Poppins', sans-serif; /* Fuente principal elegante y moderna */
+  background-color: var(--color2);    /* Fondo claro (beige) */
+  color: var(--color4);               /* Texto oscuro */
 }
 
-/* ESTRUCTURA DEL MAIN */
+/* === CONTENEDOR PRINCIPAL DE LA SECCIÓN DE PREVENCIÓN === */
 .prevencion-grid {
   display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  padding: 2rem 5%;
-  max-width: 1400px;
-  margin: 0 auto;
+  flex-direction: column; /* Los elementos hijos se apilan verticalmente */
+  gap: 2.5rem;             /* Espacio entre tarjetas */
+  padding: 2rem 5%;        /* Espacio interior (arriba/abajo y laterales) */
+  max-width: 1400px;       /* Limita el ancho máximo en pantallas grandes */
+  margin: 0 auto;          /* Centrado horizontal */
 }
 
-/* TARJETAS */
+/* === TARJETAS === */
 .prev-card {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  background-color: var(--color5);
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  min-height: 360px;
+  display: flex;                   /* Layout horizontal por defecto */
+  flex-direction: row;            /* Imagen - Texto */
+  align-items: stretch;           /* Estira hijos para igualar altura */
+  background-color: var(--color5);/* Fondo blanco */
+  border-radius: 16px;            /* Bordes redondeados */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  overflow: hidden;               /* Esconde bordes redondeados si hay desbordes */
+  transition: transform 0.3s ease;/* Animación suave al hacer hover */
+  min-height: 360px;              /* Altura mínima para mantener estructura */
 }
 
+/* Animación al pasar el mouse */
 .prev-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-4px);    /* Desplaza ligeramente hacia arriba */
 }
 
+/* Variante: tarjeta con imagen a la derecha */
 .prev-card.reverse {
-  flex-direction: row-reverse;
+  flex-direction: row-reverse;    /* Texto - Imagen */
 }
 
+/* Variante: tarjeta introductoria (fondo naranja, texto blanco) */
 .prev-card.intro-card {
-  background-color: var(--color1);
-  color: var(--color5);
+  background-color: var(--color1);/* Naranja */
+  color: var(--color5);           /* Texto blanco */
 }
 
-/* TEXTOS */
+/* === TEXTO DENTRO DE LAS TARJETAS === */
 .card-text {
-  flex: 1 1 60%;
-  padding: 2rem 2.5rem;
+  flex: 1 1 60%;             /* Ocupa el 60% del ancho, flexible */
+  padding: 2rem 2.5rem;      /* Espaciado interior */
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: column;   /* Contenido vertical */
+  justify-content: center;  /* Centrado vertical dentro del espacio */
 }
 
 .card-text h2,
 .card-text h3 {
-  margin-bottom: 1rem;
-  font-weight: 600;
+  margin-bottom: 1rem;       /* Espacio inferior para separación visual */
+  font-weight: 600;          /* Negrita */
 }
 
 .card-text p,
 .card-text ul {
-  font-size: 1.05rem;
-  line-height: 1.7;
+  font-size: 1.05rem;        /* Tamaño ligeramente mayor al estándar */
+  line-height: 1.7;          /* Espaciado entre líneas para lectura cómoda */
 }
 
 .card-text ul {
-  list-style: disc;
-  padding-left: 1.5rem;
+  list-style: disc;          /* Viñetas estándar */
+  padding-left: 1.5rem;      /* Sangría izquierda para listas */
 }
 
-/* IMÁGENES */
+/* === CONTENEDOR DE IMAGEN DE LA TARJETA === */
 .card-img {
-  flex: 1 1 40%;
-  background-color: var(--color2);
+  flex: 1 1 40%;             /* Ocupa el 40% del ancho */
+  background-color: var(--color2); /* Fondo beige */
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center;       /* Centrado vertical */
+  justify-content: center;   /* Centrado horizontal */
   padding: 0;
 }
 
+/* Imagen dentro del contenedor */
 .card-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-  padding: 1.5rem;
-  border-radius: 12px;
+  width: 100%;               /* Ocupa todo el ancho disponible */
+  height: 100%;              /* Ocupa toda la altura disponible */
+  object-fit: contain;       /* Escala sin deformar ni recortar */
+  object-position: center;   /* Centrada dentro del espacio */
+  padding: 1.5rem;           /* Espaciado interior para respiración */
+  border-radius: 12px;       /* Bordes redondeados a la imagen */
 }
 
+
+/****Logo de whatsapp **/
+ .whatsapp-fixed {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .whatsapp-fixed a {
+      position: relative;
+      display: inline-block;
+    }
+
+    .whatsapp-fixed img {
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-fixed img:hover {
+      transform: scale(1.5);
+    }
+
+    /* Estilo del mensaje emergente */
+    .tooltip {
+      visibility: hidden;
+      width: 160px;
+      background-color: #25D366;
+      color: white;
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px;
+      position: absolute;
+      bottom: 70px;
+      right: 0;
+      opacity: 0;
+      transition: opacity 0.3s;
+      font-size: 14px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    }
+
+    .whatsapp-fixed a:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }

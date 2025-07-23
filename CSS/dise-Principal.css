@@ -1,182 +1,209 @@
-/* DISEÑO UNIVERSAL */
+/* === VARIABLES GLOBALES === */
 :root {
-    --color1: orange;
-    --color2: Beige;
-    --color3: #BCBCBC;
-    --color4: #00010D;
-    --color5: white;
+  --color1: orange;          /* Color principal (naranja) */
+  --color2: beige;           /* Fondo secundario (beige) */
+  --color3: #bcbcbc;         /* Gris claro, usado en bordes */
+  --color4: #00010d;         /* Color de texto oscuro (casi negro) */
+  --color5: white;           /* Blanco para textos o fondos */
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  --radius: 12px;            /* Bordes redondeados */
 }
 
+/* === ESTILOS GENERALES === */
 body {
-    margin: 0;
+  margin: 0; /* Elimina el margen por defecto del navegador */
 }
 
-/* HEADER */
+/* === CABECERA DEL SITIO === */
 .cabecera {
-    height: 150px;
-    background-color: var(--color1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
+  height: 150px;
+  background-color: var(--color1); /* Fondo naranja */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box; /* Incluye padding en el tamaño total */
 }
 
+/* Logo izquierdo */
 #logo-1 {
-    height: 120px;
-    width: auto;
-    margin: 0px;
+  height: 120px;
+  width: auto;
+  margin: 0px;
 }
 
+/* Título principal */
 #titulo {
-    color: var(--color2);
-    font-family: Georgia, serif;
-    font-size: 50px;
+  color: var(--color2);           /* Texto en color beige */
+  font-family: Georgia, serif;    /* Fuente con serifas */
+  font-size: 50px;
 }
 
+/* Icono de inicio (a la derecha) */
 #icono-inicio {
-    height: 70px;
-    width: auto;
-    margin-right: 50px;
+  height: 70px;
+  width: auto;
+  margin-right: 50px;
 }
 
-/* NAVEGACIÓN */
+/* === MENÚ DE NAVEGACIÓN === */
 .nav-link {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background-color: var(--color2);
-    height: 7vh;
-    text-align: center;
+  position: sticky;              /* Se queda arriba al hacer scroll */
+  top: 0;
+  z-index: 100;                  /* Aparece por encima de otros elementos */
+  background-color: var(--color2); /* Fondo beige */
+  height: 7vh;
+  text-align: center;
 }
 
+/* Enlaces del menú */
 a {
-    font-family: Arial;
-    color: var(--color1);
-    text-decoration: none;
+  font-family: Arial;
+  color: var(--color1);           /* Color naranja */
+  text-decoration: none;          /* Sin subrayado */
+  
 }
 
+/* Hover de los enlaces */
 a:hover {
-    color: var(--color4);
+  color: var(--color4);           /* Color negro al pasar el cursor */
+  
 }
 
+/* Lista de navegación */
 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
+  list-style: none;               /* Quita los puntos */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;        /* Centra horizontalmente */
 }
 
 li {
-    margin: 0 30px;
+  margin: 0 30px;                 /* Espaciado entre elementos del menú */
 }
 
+/* === MENÚ DESPLEGABLE === */
 .dropdown {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .dropdown-content {
-    font-family: sans-serif;
-    display: none;
-    position: absolute;
-    background-color: var(--color2);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
+  font-family: sans-serif;
+  display: none;
+  position: absolute;
+  background-color: var(--color2);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
 }
 
-.parrafo-inicio {
-    color: white;
-}
-
+/* Al pasar el mouse, se muestra el menú */
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
+  text-align: justify;
 }
 
+/* Párrafo de inicio (probablemente dentro del header) */
+.parrafo-inicio {
+  color: white;
+}
+
+/* Contenedor para botones o enlaces apilados */
 .tiposB {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
+/* ID con color naranja */
 #men {
-    color: var(--color1);
+  color: var(--color1);
 }
 
-/* FOOTER */
+/* === PIE DE PÁGINA === */
 .footer {
-    background-color: var(--color4);
-    padding: 40px;
-    font-family: Arial, sans-serif;
+  background-color: var(--color4); /* Fondo oscuro */
+  padding: 40px;
+  font-family: Arial, sans-serif;
 }
 
+/* Contenedor principal del footer */
 .footer-contenedor {
-    display: flex;
+  display: flex;
 }
 
+/* Columnas del footer */
 .columnas, .contenedor-columnas {
-    flex: 1 1 30%;
+  flex: 1 1 30%;
 }
 
+/* Títulos de columnas */
 .columnas h3, .contenedor-columnas h3 {
-    color: var(--color5);
-    border-bottom: 1px solid var(--color3);
-    padding-bottom: 5px;
+  color: var(--color5);            /* Blanco */
+  border-bottom: 1px solid var(--color3); /* Línea gris clara */
+  padding-bottom: 5px;
 }
 
+/* Listas dentro del footer */
 .columnas ul, .contenedor-columnas ul {
-    display: inline;
-    list-style: none;
-    padding: 10px;
+  display: inline;
+  list-style: none;
+  padding: 10px;
 }
 
 .columnas ul li, .contenedor-columnas ul li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
+/* Enlaces del footer */
 .columnas ul li a, .contenedor-columnas ul li a {
-    color: var(--color5);
-    text-decoration: none;
+  color: var(--color5);            /* Blanco */
+  text-decoration: none;
 }
 
+/* Hover en enlaces del footer */
 .columnas ul li a:hover, .contenedor-columnas ul li a:hover {
-    color: var(--color5);
+  color: var(--color5); /* Sigue siendo blanco para mantener visibilidad */
 }
 
+/* Pie de página inferior */
 .pie-abajo {
-    text-align: center;
-    border-top: 1px solid var(--color3);
-    font-size: 14px;
-    color: var(--color3);
+  text-align: center;
+  border-top: 1px solid var(--color3); /* Línea divisoria */
+  font-size: 14px;
+  color: var(--color3);
 }
 
+/* Derechos reservados */
 #derechorese {
-    color: var(--color5);
-    text-align: center;
+  color: var(--color5);
+  text-align: center;
 }
 
+/* Línea decorativa debajo del título en el footer */
 .footer h3 {
-  border-bottom: 2px solid var(--color1);
+  border-bottom: 2px solid var(--color1); /* Línea naranja */
   padding-bottom: 0.5rem;
 }
 
-/*ICONOS EN EL NAV*/
+/* === ÍCONOS EN LA NAVEGACIÓN === */
 .nav-link i {
   margin-right: 8px;
-  color: var(--color-primario);
+  color: var(--color-primario); /* Esta variable no está definida */
 }
 
+/* Duplicado innecesario (puedes borrar uno si quieres) */
 .nav-link i {
   margin-right: 5px;
 }
 
-/* ========================= */
-/*        MEDIA QUERIES     */
-/* ========================= */
+/* ========================================= */
+/*                MEDIA QUERIES             */
+/* ========================================= */
 
-/* Tablets */
+/* === TABLETS (≤ 1024px) === */
 @media (max-width: 1024px) {
   #titulo {
     font-size: 40px;
@@ -207,7 +234,7 @@ li {
   }
 }
 
-/* Móviles grandes */
+/* === MÓVILES GRANDES (≤ 768px) === */
 @media (max-width: 768px) {
   .nav-link {
     height: auto;
@@ -223,6 +250,7 @@ li {
     margin: 8px 0;
   }
 
+  /* Menú desplegable en modo móvil */
   .dropdown-content {
     position: static;
     box-shadow: none;
@@ -230,6 +258,7 @@ li {
     padding: 0;
   }
 
+  /* Footer en columna */
   .footer-contenedor {
     flex-direction: column;
     gap: 20px;
@@ -244,7 +273,7 @@ li {
   }
 }
 
-/* Móviles pequeños */
+/* === MÓVILES PEQUEÑOS (≤ 480px) === */
 @media (max-width: 480px) {
   #logo-1 {
     height: 80px;

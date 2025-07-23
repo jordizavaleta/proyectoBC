@@ -1,88 +1,87 @@
-:root {
-  --color1: orange;
-  --color2: beige;
-  --color3: #bcbcbc;
-  --color4: #00010d;
-  --color5: white;
-  --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  --radius: 12px;
-}
 
+/* === ESTILOS GENERALES DEL CUERPO === */
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: var(--color2);
-  color: var(--color4);
+  font-family: 'Segoe UI', sans-serif; /* Fuente base */
+  background: var(--color2);           /* Fondo beige */
+  color: var(--color4);                /* Texto oscuro */
 }
 
+/* === CONTENEDOR PRINCIPAL DE INFORMACIÓN DEL COLEGIO === */
 .colegio {
-  max-width: 1200px;
-  margin: 2rem auto;
-  background: var(--color5);
-  padding: 2rem;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  max-width: 1200px;                  /* Ancho máximo del contenedor */
+  margin: 2rem auto;                  /* Centrado vertical con margen */
+  background: var(--color5);          /* Fondo blanco */
+  padding: 2rem;                      /* Relleno interno */
+  border-radius: var(--radius);       /* Bordes redondeados */
+  box-shadow: var(--shadow);          /* Sombra para profundidad */
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2rem;                          /* Espacio entre elementos hijos */
 }
 
+/* === TÍTULO JUNTO A IMAGEN DEL COLEGIO === */
 .titulo-imagen {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1rem;                          /* Espacio entre texto e imagen */
 }
 
 .titulo-imagen img {
   width: 90px;
   height: 90px;
-  object-fit: contain;
+  object-fit: contain;                /* Escala la imagen sin deformarla */
 }
 
+/* === DESCRIPCIÓN DEL COLEGIO === */
 .descripcion {
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.6;                   /* Altura de línea para mejor lectura */
 }
 
+/* === BLOQUE DE ALIANZAS O DATOS DESTACADOS === */
 .alianza {
-  background: var(--color2);
-  border-left: 5px solid var(--color1);
+  background: var(--color2);          /* Fondo beige */
+  border-left: 5px solid var(--color1); /* Línea decorativa izquierda */
   padding: 1rem;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
 
+/* === SECCIÓN DE MISIÓN Y VISIÓN === */
 .mision-vision {
   display: flex;
   gap: 2rem;
-  flex-wrap: wrap;
+  flex-wrap: wrap;                    /* Permite que se acomode en pantallas pequeñas */
 }
 
 .mision,
 .vision {
-  flex: 1;
+  flex: 1;                            /* Ocupan espacio equitativo */
   background: var(--color2);
   padding: 1rem;
-  border-left: 5px solid var(--color1); /* Línea naranja */
+  border-left: 5px solid var(--color1); /* Línea naranja decorativa */
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
 
+/* === SECCIÓN DEL GRÁFICO CON IMAGEN Y LEYENDA === */
 .grafico {
   text-align: center;
 }
 
 .grafico img {
-  max-width: 50%;
+  max-width: 50%;                     /* Limita el tamaño máximo */
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
 
+/* === LEYENDA DE COLORES DEL GRÁFICO === */
 .leyenda {
-  list-style: none;
+  list-style: none;                   /* Quita los puntos de lista */
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Centrado horizontal */
+  justify-content: center;           /* Centrado de elementos */
   gap: 1rem;
   padding: 0;
   margin-top: 1rem;
@@ -98,24 +97,26 @@ body {
   box-shadow: var(--shadow);
 }
 
+/* === CÍRCULOS DE COLOR PARA CATEGORÍAS DEL GRÁFICO === */
 .color {
   width: 18px;
   height: 18px;
   display: inline-block;
   margin-right: 0.5rem;
-  border-radius: 50%;
-  border: 2px solid var(--color4);
+  border-radius: 50%;                /* Forma circular */
+  border: 2px solid var(--color4);   /* Borde oscuro */
 }
 
-/* Colores de leyenda que coinciden con la imagen */
-.color-verbal    { background: #F87526; } /* Naranja fuerte */
-.color-ciber     { background: #45B3B8; } /* Púrpura */
-.color-psico     { background: #1D7DBC; } /* Azul */
-.color-fisico    { background: #45B3B8; } /* Rojo */
-.color-social    { background: #FFC03F; } /* Verde */
+/* === COLORES ESPECÍFICOS DE CADA TIPO DE VIOLENCIA === */
+.color-verbal    { background: #F87526; } /* Naranja fuerte - violencia verbal */
+.color-ciber     { background: #45B3B8; } /* Púrpura - ciberacoso */
+.color-psico     { background: #1D7DBC; } /* Azul - psicológica */
+.color-fisico    { background: #45B3B8; } /* Repetido (debería diferenciarse) */
+.color-social    { background: #FFC03F; } /* Amarillo - violencia social */
 
+/* === BOTÓN PARA MOSTRAR/OCULTAR PORCENTAJES === */
 #toggle-porcentajes {
-  background-color: var(--color1); /* naranja */
+  background-color: var(--color1);   /* Naranja */
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -129,10 +130,10 @@ body {
 
 #toggle-porcentajes:hover {
   background-color: darkorange;
-  transform: scale(1.05);
+  transform: scale(1.05);            /* Pequeño efecto de agrandamiento */
 }
 
-
+/* === MAPA DE UBICACIÓN CON GOOGLE MAPS === */
 .ubicacion iframe {
   width: 100%;
   height: 300px;
@@ -141,6 +142,7 @@ body {
   box-shadow: var(--shadow);
 }
 
+/* === DISEÑO RESPONSIVO PARA TABLETS Y MÓVILES === */
 @media (max-width: 768px) {
   .titulo-imagen {
     flex-direction: column;
@@ -156,3 +158,50 @@ body {
     align-items: center;
   }
 }
+
+/****Logo de whatsapp **/
+ .whatsapp-fixed {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .whatsapp-fixed a {
+      position: relative;
+      display: inline-block;
+    }
+
+    .whatsapp-fixed img {
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-fixed img:hover {
+      transform: scale(1.5);
+    }
+
+    /* Estilo del mensaje emergente */
+    .tooltip {
+      visibility: hidden;
+      width: 160px;
+      background-color: #25D366;
+      color: white;
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px;
+      position: absolute;
+      bottom: 70px;
+      right: 0;
+      opacity: 0;
+      transition: opacity 0.3s;
+      font-size: 14px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    }
+
+    .whatsapp-fixed a:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
