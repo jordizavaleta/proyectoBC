@@ -1,72 +1,107 @@
+/* === Estilo general del body === */
 body {
-    background-color: var(--color2);
-    margin: 0;
+    background-color: var(--color2); /* Color de fondo principal */
+    margin: 0; /* Elimina márgenes por defecto */
 }
 
-/* PRESENTACIÓN DE PÁGINA */
+/* === Contenedor de presentación principal === */
 .cont-presentacion {
-   
+    /* Fondo con degradado oscuro sobre imagen de fondo */
     background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.3)), url("../MEDIA/IMAGENES/JPG/fondo1.jpg");
-    background-size: cover;
-    background-size: cover;
-    /* Ajuste de la imagen */
-    background-position: center;
-    /* Alinea la imagen en el centro */
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    text-align: center;
-    display: flex;
+    background-size: cover; /* La imagen cubre todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    position: relative; /* Posicionamiento relativo para el texto */
+    text-align: center; /* Alineación del texto al centro */
+    display: flex; /* Activa Flexbox */
 }
 
-#frase{
-    position: absolute;
-    font-size:80px;
-    top:20px;
-    left: 80px;
-    
-    color:white;
-    font-family: 'Arial', sans-serif;
-    text-shadow: 1px 1px 1px white;
-
+/* === Texto destacado en la presentación === */
+#frase {
+    position: absolute; /* Posición absoluta dentro del contenedor */
+    font-size: 80px; /* Tamaño grande del texto */
+    top: 20px; /* Distancia desde arriba */
+    left: 80px; /* Distancia desde la izquierda */
+    color: white; /* Color del texto */
+    font-family: 'Arial', sans-serif; /* Fuente del texto */
+    text-shadow: 1px 1px 1px white; /* Sombra para mejorar visibilidad */
 }
 
-/* Botones */
-#info,#registrar {
+/* === Botones principales === */
+#info, #registrar {
+    padding: 10px 20px; /* Espaciado interno */
+    margin: 15px; /* Espaciado externo */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    background-color: var(--color1); /* Color de fondo */
+    color: var(--color5); /* Color del texto */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* === Estilo para botón tipo enlace === */
+.btn-link {
     padding: 10px 20px;
-    margin: 15px;
-    /* Separación entre los botones */
-    font-size: 16px;
-    cursor: pointer;
-    /* Cambia el cursor al pasar por encima */
-    background-color: var(--color1);
-    /* Color de fondo */
-    color: var(--color5);
-    /* Color del texto */
-    border-radius: 5px;
-    /* Bordes redondeados */
+    background-color: var(--color1); /* Color de fondo (naranja) */
+    color: var(--color5); /* Color del texto (blanco) */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cursor tipo botón */
+    font-weight: bold; /* Texto en negrita */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
 }
 
+/* === Efecto al pasar el mouse sobre el botón === */
+.btn-link:hover {
+    background-color: var(--color4); /* Cambia a un tono más oscuro */
+    transform: scale(1.05); /* Efecto de agrandamiento */
+}
 
-/*Estilo para el botón de información*/
+/* === Sección de despliegue de contenidos en cuadrícula === */
 .secc-desplie {
-    font-family: Arial;
-    color: var(--color2);
-    display: grid;
-    text-align: center;
-    grid-template-areas: "pres pres pres" "info prev test" "eres quienes cole";
-
+    font-family: Arial; /* Fuente general */
+    color: var(--color2); /* Color del texto */
+    display: grid; /* Uso de grid layout */
+    text-align: center; /* Texto centrado */
+    grid-template-areas: 
+        "pres pres img"
+        "info prev test"
+        "eres quienes cole"; /* Distribución de áreas */
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 20px; /* Espacio entre elementos */
+    align-items: start; /* Alineación superior de elementos */
 }
 
+/* === Imagen destacada lateral === */
+#img-xd {
+    grid-area: img; /* Ubicación en la cuadrícula */
+    width: auto;
+    height: 340px;
+    margin: 20px;
+}
+
+/* === Título de presentación === */
+#titu-pres {
+    color: var(--color1); /* Color de texto */
+    font-size: 60px;
+}
+
+/* === Párrafo de presentación === */
+#parra-pres {
+    font-size: 18px;
+}
+
+/* === Cuadro de presentación general === */
 #pres-pag {
     border-radius: 12px;
-    background-color: var(--color1);
     height: 300px;
     margin: 20px;
     grid-area: pres;
 }
 
+/* === Tarjeta: Información del bullying === */
 #pag-info {
     background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../MEDIA/IMAGENES/JPG/causaefecto.jpg");
     background-size: cover;
@@ -76,8 +111,8 @@ body {
     margin: 20px;
 }
 
+/* === Tarjeta: Qué es el bullying === */
 #pag-prev {
-    
     background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../MEDIA/IMAGENES/JPG/BulliynQueEs.jpg");
     background-size: cover;
     border-radius: 12px;
@@ -87,6 +122,7 @@ body {
     margin: 20px;
 }
 
+/* === Tarjeta: Test de violencia === */
 #pag-test {
     background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../MEDIA/IMAGENES/JPG/fondo.jpeg");
     background-size: cover;
@@ -97,72 +133,185 @@ body {
     margin: 20px;
 }
 
+/* === Tarjeta: ¿Eres víctima? === */
 #pag-eresVi {
     background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../MEDIA/IMAGENES/JPG/Quehacer.webp");
     background-size: cover;
-
     border-radius: 12px;
-
     grid-area: eres;
     background-color: var(--color1);
     height: 300px;
     margin: 20px;
 }
 
+/* === Tarjeta: Quiénes somos === */
 #pag-quieSo {
-
-    
     background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../MEDIA/IMAGENES/JPG/46.png");
     background-size: cover;
-
     border-radius: 12px;
-
     grid-area: quienes;
     background-color: var(--color1);
     height: 300px;
     margin: 20px;
 }
 
+/* === Tarjeta: Información del colegio === */
 #info-cole {
-    
     background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.65)), url("../MEDIA/IMAGENES/JPG/47.png");
     background-size: cover;
-
     border-radius: 12px;
-
     grid-area: cole;
     background-color: var(--color1);
     height: 300px;
     margin: 20px;
 }
 
+/* === Enlaces generales dentro de las tarjetas === */
 .link-pag {
     border-radius: 12px;
-
-    color: var(--color5);
-    text-decoration: none;
-    /* Sin subrayado */
-    font-weight: bold;
-    /* Negrita */
+    color: var(--color5); /* Color de texto */
+    text-decoration: none; /* Quita subrayado */
+    font-weight: bold; /* Texto en negrita */
 }
 
+/* === Títulos generales (h2) === */
 h2 {
     border-radius: 12px;
-
     color: var(--color5);
     font-size: 24px;
-    /* Tamaño de fuente */
     margin-bottom: 10px;
-    /* Espacio debajo del título */
 }
 
+/* === Párrafos generales === */
 p {
     border-radius: 12px;
     margin: 25px;
     text-align: justify;
     color: var(--color4);
     font-size: 16px;
-    /* Tamaño de fuente */
     margin-bottom: 20px;
-    /* Espacio debajo del párrafo */
 }
+
+/* === RESPONSIVE DESIGN para pantallas medianas === */
+@media (max-width: 1024px) {
+    #frase {
+        font-size: 48px;
+        left: 20px;
+        top: 20px;
+    }
+
+    .secc-desplie {
+        /* Cambia el diseño de 3 columnas a una sola columna */
+        grid-template-areas:
+            "pres"
+            "img"
+            "info"
+            "prev"
+            "test"
+            "eres"
+            "quienes"
+            "cole";
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    #img-xd {
+        height: 240px;
+        margin: 10px;
+    }
+
+    #titu-pres {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    #parra-pres {
+        font-size: 16px;
+        margin: 10px 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+        margin: 15px;
+    }
+
+    #info, #registrar, .btn-link {
+        font-size: 14px;
+        padding: 8px 16px;
+        margin: 10px;
+    }
+}
+
+/* === RESPONSIVE DESIGN para móviles === */
+@media (max-width: 600px) {
+    #frase {
+        font-size: 36px;
+        left: 10px;
+        top: 10px;
+    }
+
+    #img-xd {
+        height: 180px;
+    }
+
+    #titu-pres {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}
+    .whatsapp-fixed {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .whatsapp-fixed a {
+      position: relative;
+      display: inline-block;
+    }
+
+    .whatsapp-fixed img {
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-fixed img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Estilo del mensaje emergente */
+    .tooltip {
+      visibility: hidden;
+      width: 160px;
+      background-color: #25D366;
+      color: white;
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px;
+      position: absolute;
+      bottom: 70px;
+      right: 0;
+      opacity: 0;
+      transition: opacity 0.3s;
+      font-size: 14px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    }
+
+    .whatsapp-fixed a:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
