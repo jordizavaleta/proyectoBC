@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Colegio | DWFE</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../CSS/dise-Principal.css" />
+  <link rel="stylesheet" href="../CSS/colegio.css" />
+  <link rel="shortcut icon" href="../MEDIA/IMAGENES/PNG/45.png" />
+</head>
+
+<body>
+  <header class="cabecera">
+    <div id="iconos">
+      <a href="../BullyingCero.html"><img src="../MEDIA/IMAGENES/PNG/45.png" id="logo-1" /></a>
+    </div>
+    <h1 id="titulo">BullyingCero</h1>
+    <a href="../HTML/usuario.html"><img src="../MEDIA/IMAGENES/PNG/IconoInicio.png" id="icono-inicio" /></a>
+  </header>
+
+   <nav class="nav-link">
+  <br>
+  <ul>
+    <li><a href="../BullyingCero.html"><i class="fas fa-home"></i> <strong>Inicio</strong></a></li>
+    <li class="dropdown"><a href="../HTML/quienesSomos.html"><i class="fas fa-users"></i> <strong>¿Quiénes Somos?</strong></a>
+      <div class="dropdown-content">
+        <p id="men">¿Quiénes Somos?</p>
+      </div>
+    </li>
+    <li class="dropdown"><a href="../HTML/informacion.html"><i class="fas fa-info-circle"></i> <strong>¿Qué es el Bullying?</strong></a>
+      <div class="dropdown-content">
+        <p id="men">El bullying o acoso es la agresión para ejercer poder sobre otra persona.</p>
+      </div>
+    </li>
+    <li class="dropdown"><a href="../HTML/prevencion.html"><i class="fas fa-shield-alt"></i> <strong>¿Cómo Prevenir el Bullying?</strong></a>
+      <div class="dropdown-content">
+        <p id="men">se basa en fomentar un ambiente escolar seguro, respetuoso y de apoyo, donde se promueva la
+          empatía y la resolución pacífica de conflictos.</p>
+      </div>
+    </li>
+    <li class="dropdown"><a href="../HTML/eresVictima.html "><i class="fas fa-exclamation-triangle"></i> <strong>¿Eres Víctima?</strong></a>
+      <div class="dropdown-content">
+        <p id="men">Habla con alguien de confianza, como un adulto, y considera denunciar el acoso a las autoridades
+          escolares o, si es necesario, a la policía.</p>
+      </div>
+    </li>
+    <li class="dropdown"><a href="../HTML/testimonio.html "><i class="fas fa-comment-dots"></i> <strong>Cuentanos tu caso</strong></a>
+      <div class="dropdown-content">
+        <p id="men">Lee historias reales de personas que han enfrentado el bullying y cómo lo superaron, tambien
+          puedes contarnos tu historia</p>
+      </div>
+    </li>
+    <li class="dropdown"><a href="../HTML/colegio.html"><i class="fas fa-school"></i> <strong>Colegio</strong></a>
+      <div class="dropdown-content">
+        <p id="men">El nombre "Leoncio Prado Gutiérrez" hace referencia a un héroe peruano, coronel, que participó en
+          la Guerra del Pacífico y fue ejecutado por el ejército chileno después de la batalla de Huamachuco en 1883.
+        </p>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+
+<article class="colegio">
+  <!-- Fila 1 -->
+  <div class="titulo-imagen">
+    <img src="../MEDIA/IMAGENES/PNG/insignia del colegio.png" alt="Insignia" />
+    <h2>Institución Educativa Leoncio Prado Gutiérrez 80627</h2>
+  </div>
+
+  <p class="descripcion">
+    La Institución Educativa Pública <strong>"Leoncio Prado Gutiérrez"</strong>, con código modular <strong>80627</strong>,
+    está ubicada en El Porvenir, Trujillo – La Libertad. Lleva el nombre del héroe nacional Leoncio Prado y se guía por los valores de
+    <em>"Dios, Patria y Trabajo"</em>.
+  </p>
+
+  <section class="alianza">
+    <h3>Alianza con FACTOR X++</h3>
+    <p>
+      La I.E. Leoncio Prado ha establecido una alianza con <strong>FACTOR X++</strong> para erradicar el acoso escolar.
+      Esta colaboración promueve espacios seguros, apoyo emocional y herramientas digitales para que los alumnos compartan sus experiencias.
+    </p>
+  </section>
+
+  <div class="mision-vision">
+    <div class="mision">
+      <h3>Misión</h3>
+      <p>
+        Promover una enseñanza creativa e innovadora que prepare a los estudiantes para su futuro profesional, erradicando el bullying
+        y promoviendo valores como respeto, empatía y responsabilidad social.
+      </p>
+    </div>
+    <div class="vision">
+      <h3>Visión</h3>
+      <p>
+        Ser una institución acreditada y reconocida por su liderazgo educativo y lucha contra la violencia escolar.
+        Nos apoyamos en la tecnología, docentes calificados y alianzas estratégicas.
+      </p>
+      <p>
+        <strong>Dirección:</strong> Av. Jaime Blanco 1855, Etapa IV – El Porvenir, Trujillo.<br>
+        <strong>Modalidad:</strong> Escolarizada (mañana y tarde) | <strong>Género:</strong> Mixto
+      </p>
+    </div>
+  </div>
+
+  <div class="grafico">
+    <img src="../MEDIA/IMAGENES/PNG/porcentaje.png" alt="Gráfico de bullying" />
+  </div>
+
+<!-- Botón para mostrar/ocultar porcentajes -->
+<button id="toggle-porcentajes" style="margin: 1rem auto; display: block;">Mostrar/Ocultar Porcentajes</button>
+
+<!-- Contenedor de la leyenda -->
+<ul class="leyenda" id="contenedor-porcentajes" style="display: none;">
+  <li><span class="color color-verbal"></span> Bullying Verbal - 35%</li>
+  <li><span class="color color-ciber"></span> CiberBullying - 15%</li>
+  <li><span class="color color-psico"></span> Bullying Psicológico - 15%</li>
+  <li><span class="color color-fisico"></span> Bullying Físico - 20%</li>
+  <li><span class="color color-social"></span> Exclusión Social - 25%</li>
+</ul>
+
+
+  <section class="ubicacion">
+    <h3>Ubicación</h3>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d987.5725348726628!2d-78.9944359623153!3d-8.071861341166013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad16757d9f6311%3A0x5926320a8f74480d!2sLeoncio%20Prado%2C%20El%20Porvenir%2013004!5e0!3m2!1sen!2spe!4v1752537342523!5m2!1sen!2spe"
+      width="100%" height="300" allowfullscreen loading="lazy"></iframe>
+  </section>
+</article>
+
+
+
+  <footer class="footer">
+    <div class="footer-contenedor">
+      <div class="columnas">
+        <h3>Organización</h3>
+        <ul>
+          <li><a href="">BullyingCero</a></li>
+          <li><a href="">Integrantes</a></li>
+          <li><a href="">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="contenedor-columnas">
+        <h3>Soporte</h3>
+        <ul>
+          <li><a href="">Centro de ayuda</a></li>
+          <li><a href="">Contacto</a></li>
+          <li><a href="">Políticas</a></li>
+        </ul>
+      </div>
+
+      <div class="contenedor-columnas">
+        <h3>Redes Sociales</h3>
+        <ul>
+          <li><a href="">Facebook</a></li>
+          <li><a href="">X (Twitter)</a></li>
+          <li><a href="">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pie-abajo">
+      <br />
+      <p id="derechorese">© 2025 BullyingCero <br /><br />Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script src="../JS/jquery-3.7.1.js"></script>
+  <script src="../JS/colegio.js"></script>
+</body>
+
+</html>
