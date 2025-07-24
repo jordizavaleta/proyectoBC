@@ -103,7 +103,7 @@ body {
 
 /* === Tarjeta: Información del bullying === */
 #pag-info {
-    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../MEDIA/IMAGENES/JPG/causaefecto.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.35)), url("../MEDIA/IMAGENES/JPG/info.webp");
     background-size: cover;
     border-radius: 12px;
     grid-area: info;
@@ -124,7 +124,7 @@ body {
 
 /* === Tarjeta: Test de violencia === */
 #pag-test {
-    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../MEDIA/IMAGENES/JPG/fondo.jpeg");
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../MEDIA/IMAGENES/PNG/padres.png");
     background-size: cover;
     border-radius: 12px;
     grid-area: test;
@@ -135,7 +135,7 @@ body {
 
 /* === Tarjeta: ¿Eres víctima? === */
 #pag-eresVi {
-    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../MEDIA/IMAGENES/JPG/Quehacer.webp");
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.35)), url("../MEDIA/IMAGENES/JPG/victima.jpg");
     background-size: cover;
     border-radius: 12px;
     grid-area: eres;
@@ -146,7 +146,7 @@ body {
 
 /* === Tarjeta: Quiénes somos === */
 #pag-quieSo {
-    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../MEDIA/IMAGENES/JPG/46.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.205)), url("../MEDIA/IMAGENES/JPG/somos.jpg");
     background-size: cover;
     border-radius: 12px;
     grid-area: quienes;
@@ -157,7 +157,7 @@ body {
 
 /* === Tarjeta: Información del colegio === */
 #info-cole {
-    background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.65)), url("../MEDIA/IMAGENES/JPG/47.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.35)), url("../MEDIA/IMAGENES/JPG/alianza.avif");
     background-size: cover;
     border-radius: 12px;
     grid-area: cole;
