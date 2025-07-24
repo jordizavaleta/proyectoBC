@@ -77,8 +77,9 @@ body {
 /* === Imagen destacada lateral === */
 #img-xd {
     grid-area: img; /* Ubicación en la cuadrícula */
-    width: auto;
-    height: 340px;
+    
+    width: 95%;
+    height: 85%;
     margin: 20px;
 }
 
@@ -90,7 +91,7 @@ body {
 
 /* === Párrafo de presentación === */
 #parra-pres {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 /* === Cuadro de presentación general === */
@@ -253,9 +254,12 @@ p {
         left: 10px;
         top: 10px;
     }
+    #parra-pres{
+        font-size: 0.8rem;
+    }
 
     #img-xd {
-        height: 180px;
+       display: none;
     }
 
     #titu-pres {
