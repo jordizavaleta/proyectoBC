@@ -15,7 +15,9 @@ window.addEventListener('load', function () {
   }
 });
 
-
+  function redirigir() {
+    window.location.href = "HTML/registro.html";
+  }
 
 // JQUERY
 
