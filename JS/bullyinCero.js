@@ -16,7 +16,7 @@ window.addEventListener('load', function () {
 });
 
   function redirigir() {
-    window.location.href = "HTML/registro.html";
+    window.location.href = "https://www.youtube.com/";
   }
 
 // JQUERY
